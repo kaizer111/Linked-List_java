@@ -25,4 +25,17 @@ public class OpressionsonLinkedlist {
             }
         }
     }
+    public  void display() {
+        if(head == null) {
+            System.out.println("empty list");
+        }
+        else  {
+            Node temp=head;
+            while (temp != null) {
+                System.out.print(temp.value+"->");
+                temp = temp.next;
+            }
+            System.out.println("null");
+        }
+    }
 }
