@@ -38,4 +38,18 @@ public class OpressionsonLinkedlist {
             System.out.println("null");
         }
     }
+    public void insertatBegin() {
+        System.out.println("enter the node ");
+        int data= Sc.nextInt();
+
+        if(head == null)
+        {
+            head = new Node(data , null);
+        }
+        else {
+           //Node temp = new Node(data ,head);
+           head = new Node(data , head);
+        }
+        display();
+    }
 }
