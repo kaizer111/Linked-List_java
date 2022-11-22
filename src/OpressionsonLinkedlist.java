@@ -64,4 +64,22 @@ public class OpressionsonLinkedlist {
             temp.next=null;
         }
     }
+    public void deletefromBegin() {
+        if(head == null || head.next == null) {
+            head= null;
+        }
+        else {
+            head = head.next;
+        }
+    }
+    public void displaynthNode() {
+        System.out.println("enter the nth value");
+        int n= Sc.nextInt();
+        Node temp= head;
+        while(n!=0) {
+            temp= temp.next;
+            n--;
+        }
+        System.out.println(temp.value);
+    }
 }
