@@ -82,4 +82,20 @@ public class OpressionsonLinkedlist {
         }
         System.out.println(temp.value);
     }
+    public void reverse() {
+        if(head == null || head.next == null) {
+            System.out.println("less than i node");
+        }
+        else {
+            Node c=head , prev= null, n=head.next;
+            while(n!=null) {
+                c.next=prev;
+                prev=c;
+                c=n;
+                n=n.next;
+            }
+            c.next=prev;
+            head=c;
+        }
+    }
 }
