@@ -113,4 +113,22 @@ public class OpressionsonLinkedlist {
             prev.next=c.next;
         }
     }
+    public void insertatnthnode() {
+        System.out.println("Enter n ");
+        int n = Sc.nextInt();
+        System.out.println("enter the value of the node");
+        int data =Sc.nextInt();
+        if(n==1) {
+            insertatBegin();
+        }
+        else {
+            Node c=head,prev=null;
+            for(int i=1;i<n;i++)
+            {
+                prev=c;
+                c=c.next;
+            }
+            prev.next=new Node(data,c);
+        }
+    }
 }
