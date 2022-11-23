@@ -98,4 +98,19 @@ public class OpressionsonLinkedlist {
             head=c;
         }
     }
+    public void deletenthnode() {
+        System.out.println("Enter no of node to be deleted");
+        int n = Sc.nextInt();
+        if(n==1) {
+            deletefromBegin();;
+        }
+        else {
+            Node c=head,prev=null;
+            for (int i=1;i<n;i++) {
+                prev = c;
+                c= c.next;
+            }
+            prev.next=c.next;
+        }
+    }
 }
